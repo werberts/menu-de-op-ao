@@ -1,0 +1,46 @@
+# Funções para executar os comandos do menu principal
+def enviar_email():
+    print('Opção 01: Enviando e-mail')
+    print('Opção finalizada.\n')
+
+def enviar_mensagem():
+    print('Opção 02: Enviando mensagem no WhatsApp')
+    print('Opção finalizada.\n')
+
+def fazer_todos():
+    print('Opção 03: Executando todas as funções')
+    print('Opção finalizada.\n')
+
+def menu_de_opcao():
+    while True:
+        intro_principal = 'BEM VINDO'
+        linhas = '--' * 25
+        print(linhas)
+        print(f"{intro_principal.center(50)}")
+        print(linhas)
+
+        # Menu de opções
+        print("Escolha uma opção:")
+        print("1. Enviar e-mail")
+        print("2. Enviar uma mensagem no WhatsApp")
+        print("3. Fazer todas")
+        print("4. Sair")
+
+        menu_principal = int(input(": "))
+
+        if menu_principal == 1:
+            enviar_email()
+        elif menu_principal == 2:
+            enviar_mensagem()
+        elif menu_principal == 3:
+            fazer_todos()
+        elif menu_principal == 4:
+            print("Encerrando o programa.")
+            break
+        else:
+            print('Opção inválida')
+        
+        input("Pressione Enter para voltar ao menu principal...")
+
+# Chamando a função principal para executar o menu
+menu_de_opcao()
